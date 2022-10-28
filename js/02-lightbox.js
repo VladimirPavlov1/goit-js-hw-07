@@ -31,9 +31,6 @@ function markupElemGallery(galleryItems){
 galleryList.addEventListener('click',onDivGalleryClick)
 let gallery = new SimpleLightbox('.gallery__item');
 console.log(gallery)
-gallery.on('show.simplelightbox', function () {
-	console.log()
-});
 
 function onDivGalleryClick(event){
     event.preventDefault()
@@ -43,5 +40,6 @@ function onDivGalleryClick(event){
     return
    }
    gallery.options.captionDelay=250;
-   console.dir(event.target)
+   gallery.options.animationSpeed=350;
+   
 }
